@@ -98,7 +98,7 @@ SHOW_USED_FILES        = YES
 SHOW_FILES             = YES
 SHOW_NAMESPACES        = YES
 FILE_VERSION_FILTER    =
-LAYOUT_FILE            = "@CONFIG_DIRECTORY@/DoxygenLayout.xml"
+LAYOUT_FILE            = "@AMENT_CMAKE_DOXYGEN_RESOURCES_DIR@/DoxygenLayout.xml"
 CITE_BIB_FILES         =
 #---------------------------------------------------------------------------
 # Configuration options related to warning and progress messages
@@ -110,7 +110,7 @@ WARN_IF_DOC_ERROR      = YES
 WARN_NO_PARAMDOC       = YES
 WARN_AS_ERROR          = NO
 WARN_FORMAT            = "$file:$line: $text"
-WARN_LOGFILE           = "@BUILD_DIRECTORY@/warnings.log"
+WARN_LOGFILE           = "@CONFIG_DIRECTORY@/warnings.log"
 #---------------------------------------------------------------------------
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
@@ -165,7 +165,7 @@ GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
 HTML_HEADER            =
-HTML_FOOTER            = "@CONFIG_DIRECTORY@/footer.html"
+HTML_FOOTER            = "@AMENT_CMAKE_DOXYGEN_RESOURCES_DIR@/footer.html"
 HTML_STYLESHEET        =
 HTML_EXTRA_STYLESHEET  =
 HTML_EXTRA_FILES       =
