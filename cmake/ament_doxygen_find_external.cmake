@@ -21,8 +21,9 @@
 # :type tags_var: space-delimited list of strings
 # :param EXTERNAL_PROJECTS: External projects to be found.
 # :type EXTERNAL_PROJECTS: list of strings
-# :param BASE_DIRECTORY: Path to base directory to resolve tags' paths against
-#                        if provided. Defaults to none.
+# :param BASE_DIRECTORY: Path to base directory to resolve tags' paths against if provided.
+#                        Defaults to none. See `ament_doxygen_resolve_tags()` documentation
+#                        for further reference.
 # :type BASE_DIRECTORY: string
 #
 # @public

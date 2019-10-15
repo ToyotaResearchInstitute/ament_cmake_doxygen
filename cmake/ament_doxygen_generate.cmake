@@ -40,11 +40,12 @@
 #                         relative to the current CMake source directory. Defaults to '.'.
 # :type INPUT_DIRECTORY: string
 # :param INSTALL_DIRECTORY: Path to install generated output into. Non absolute paths are resolved
-#                           relative to the CMake install prefix. Defaults to the 'share/${PROJECT_NAME}/doc'
-#                           subdirectory.
+#                           relative to the CMake install prefix.
+#                           Defaults to the 'share/${PROJECT_NAME}/doc' subdirectory.
 # :type INSTALL_DIRECTORY: string
-# :param STANDALONE: Generate documentation in a self-contained way. All recursive dependencies
-#                    are re-built and bundled with this project's documentation.
+# :param STANDALONE: Generate documentation in a self-contained way. All recursive dependencies are
+#                    re-built and bundled with this project's documentation.
+#                    See `ament_doxygen_aggregate_external()` documentation for further reference.
 # :type STANDALONE: boolean
 # :param NO_INSTALL: Prevent installation of generated project documentation. This also means the project
 #                    will not be exposed in the ament index.
