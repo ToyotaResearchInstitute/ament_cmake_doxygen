@@ -54,13 +54,15 @@
 #                      these must have been installed. See ament_doxygen_find_external() documentation
 #                      for further reference.
 # :type DEPENDENCIES: list of strings
+# :param TEST_ON_WARNS: Verify null presence of doxygen-format related warnings by adding a test.
+# :type TEST_ON_WARNS: boolean
 #
 # @public
 #
 function(ament_doxygen_generate target_name)
   cmake_parse_arguments(
     args
-    "STANDALONE;NO_INSTALL"
+    "STANDALONE;NO_INSTALL;TEST_ON_WARNS"
     "PROJECT_NAME;CONFIG_OVERLAY;CONFIG_DIRECTORY;INPUT_DIRECTORY;BUILD_DIRECTORY;INSTALL_DIRECTORY"
     "DEPENDENCIES" ${ARGN})
 
@@ -158,4 +160,13 @@ function(ament_doxygen_generate target_name)
     )
     set(${target_name}_DEPENDENCIES "${args_DEPENDENCIES}" PARENT_SCOPE)
   endif()
+
+  if (args_TEST_ON_WARNS)
+  set(warning_log "${args_CONFIG_DIRECTORY}/warnings.log")
+    add_test(
+      NAME ${PROJECT_NAME}_doxygen_warnings
+      COMMAND bash "${AMENT_CMAKE_DOXYGEN_TOOLS_DIR}/check_doc_warns.sh" "${warning_log}"
+    )
+  endif()
+
 endfunction()

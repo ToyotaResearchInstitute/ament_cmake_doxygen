@@ -16,6 +16,7 @@ find_package(ament_cmake_core REQUIRED)
 find_package(Doxygen REQUIRED)
 
 set(AMENT_CMAKE_DOXYGEN_RESOURCES_DIR "${ament_cmake_doxygen_DIR}/../resources")
+set(AMENT_CMAKE_DOXYGEN_TOOLS_DIR "${ament_cmake_doxygen_DIR}/../tools")
 
 include("${ament_cmake_doxygen_DIR}/ament_doxygen_resolve_tags.cmake")
 include("${ament_cmake_doxygen_DIR}/ament_doxygen_find_external.cmake")

@@ -9,6 +9,6 @@ ament_package(
 )
 
 install(
-  DIRECTORY cmake resources
+  DIRECTORY cmake resources tools
   DESTINATION share/${PROJECT_NAME}
 )
